@@ -1,6 +1,7 @@
 <?php
 
-function rez1 ($x, $y){
+function resultOfAnd ($x, $y)
+{
     if ($x && $y) {
         return 'true';
     } else {
@@ -8,21 +9,25 @@ function rez1 ($x, $y){
     }
 }
 
-function rez2 ($x, $y){
+function resultOfOr ($x, $y)
+{
     if ($x || $y) {
         return 'true';
     } else {
         return 'false';
     }
 }
-function rez3 ($x, $y){
+function resultOfXor ($x, $y)
+{
     if ($x xor $y) {
         return 'true';
     } else {
         return 'false';
     }
 }
+
 ?>
+
 <html>
 <head>
     <title> Таблица истинности </title>
@@ -33,9 +38,9 @@ function rez3 ($x, $y){
     <tr>
         <th>оператор &&</th> <th> false </th><th> true </th>
     </tr>
-    <th> false </th> <td><?php echo rez1 (false, false) ?> </td> <td><?php echo rez1 (false, true)?> </td>
+    <th> false </th> <td><?php echo resultOfAnd(false, false) ?> </td> <td><?php echo resultOfAnd(false, true)?> </td>
     <tr>
-        <th> true </th> <td><?php echo rez1 (true, false)?> </td><td><?php echo rez1 (true, true)?></td>
+        <th> true </th> <td><?php echo resultOfAnd(true, false)?> </td><td><?php echo resultOfAnd(true, true)?></td>
 </table>
     <br>
 <table border="1" cellpadding="5">
@@ -43,9 +48,9 @@ function rez3 ($x, $y){
 <tr>
     <th>оператор || </th> <th> false </th><th> true </th>
 </tr>
-<th> false </th> <td><?php echo rez2 (false, false) ?> </td> <td><?php echo rez2 (false, true)?> </td>
+<th> false </th> <td><?php echo resultOfOr(false, false) ?> </td> <td><?php echo resultOfOr(false, true)?> </td>
 <tr>
-    <th> true </th> <td><?php echo rez2 (true, false)?> </td><td><?php echo rez2 (true, true)?></td>
+    <th> true </th> <td><?php echo resultOfOr(true, false)?> </td><td><?php echo resultOfOr(true, true)?></td>
     </table>
 <br>
 <table border="1" cellpadding="5">
@@ -53,9 +58,9 @@ function rez3 ($x, $y){
     <tr>
         <th>оператор xor </th> <th> false </th><th> true </th>
     </tr>
-    <th> false </th> <td><?php echo rez3 (false, false) ?> </td> <td><?php echo rez3 (false, true)?> </td>
+    <th> false </th> <td><?php echo resultOfXor(false, false) ?> </td> <td><?php echo resultOfXor(false, true)?> </td>
     <tr>
-        <th> true </th> <td><?php echo rez3 (true, false)?> </td><td><?php echo rez3 (true, true)?></td>
+        <th> true </th> <td><?php echo resultOfXor(true, false)?> </td><td><?php echo resultOfXor(true, true)?></td>
 </table>
 </body>
 
